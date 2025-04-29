@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { config } from './config';
+import { config,connectDatabase } from './config';
 import apiRoute from './routes';
 
 const app = express();
@@ -14,6 +14,7 @@ const initServer = async () => {
         app.listen(PORT, () => {
             console.info(`Server running on port ${PORT}.`);
         });
+        await connectDatabase();
     }catch(error){
         console.error('Failed to start server:', error);
         process.exit(1);

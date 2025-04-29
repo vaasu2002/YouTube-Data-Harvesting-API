@@ -19,4 +19,7 @@ export const config = Object.freeze({
         maxResults: parseInt(process.env.MAX_RESULTS || '50', 10),
         quotaLimit: parseInt(process.env.YOUTUBE_QUOTA_LIMIT || '10000', 10),
     },
+    database: {
+        uri: process.env.MONGODB_URI || 'mongodb://localhost:27017/yt',
+    },
 });

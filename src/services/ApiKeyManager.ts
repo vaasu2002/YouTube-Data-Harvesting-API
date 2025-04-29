@@ -306,5 +306,5 @@ class ApiKeyManager{
     }
 }
 
-export const redisApiKeyService = new ApiKeyManager();
+export const apiKeyService = new ApiKeyManager();
 export {ApiKeyManager};

@@ -201,7 +201,7 @@ class ApiKeyManager{
      * Mark the current key as used and update its quota
      * @param {number} quotaCost - The quota cost for the current request
      */
-    public async markKeyAsUsed(quotaCost: number = 100): Promise<void> {
+    public async UpdateIfQuotaReachedMarkAsUsed(quotaCost: number = 100): Promise<void> {
         if(!this.initialized){
             await this.initialize();
         }
